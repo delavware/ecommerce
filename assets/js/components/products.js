@@ -25,7 +25,7 @@ function products (products) {
     }
     productsDOM.innerHTML = htmlProduct
 
-    
+    localStorage.setItem('products', JSON.stringify(products))
    }
    printProducts()
 

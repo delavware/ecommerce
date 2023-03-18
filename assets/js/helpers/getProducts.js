@@ -17,7 +17,7 @@ return data */
 
 async function getProducts () {
     try {
-        let res = await window.fetch('https://ecommercebackend.fundamentos-29.repl.co/')
+        let res = await window.fetch('https://jmdelav.github.io/aps-api/aps.json')
         let data = await res.json()
         return data
     } catch (error) {
