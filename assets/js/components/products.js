@@ -1,6 +1,6 @@
 
 function products (products) {
-   let db = localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [...products]
+   let db = JSON.parse(localStorage.getItem("db")) ||  [...products]
 
    function printProducts () {
     let productsDOM = document.querySelector('.products__container')
@@ -25,7 +25,7 @@ function products (products) {
     }
     productsDOM.innerHTML = htmlProduct
 
-    localStorage.setItem('products', JSON.stringify(products))
+    localStorage.setItem('db', JSON.stringify(db))
    }
    printProducts()
 
